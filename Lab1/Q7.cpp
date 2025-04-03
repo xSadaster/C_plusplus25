@@ -28,11 +28,13 @@ void checkPasswordStrength(const string& input) {
         if (islower(c)) hasLower = true;
         else if (isupper(c)) hasUpper = true;
         else if (isdigit(c)) hasDigit = true;
-        else hasSpecial = true; // Any character that's not recognized as a character/ number.
+        else hasSpecial = true; 
+        /* Any character that's not recognized as a character/ number- tehcnically works, 
+        but even öä are considered "special" Could've used a "for (char c :Special) {
+    if (c == '%' || c == '+' || c == '!' -||-)" - type solution, but it's long and ugly*/
     }
-
     // Check password strength
-    if (n >= MIN_LENGTH && hasLower && hasUpper && hasDigit && hasSpecial) {
+    if (n >= MIN_LENGTH && hasLower && hasUpper && hasDigit && hasSpecial) { //if all criteria is satisfied, print "Strong password", else identify missing criteria 
         cout << "Strong Password" << endl;
     } else {cout << "Weak Password. Missing criteria:" << endl;
         if (n < MIN_LENGTH) cout << "- Minimum length of " << MIN_LENGTH << " characters" << endl;
