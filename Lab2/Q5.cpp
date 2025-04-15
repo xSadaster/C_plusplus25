@@ -1,3 +1,19 @@
-/*Exercise 5: Write a program that creates an array and uses a pointer to traverse it and store it in
-another array and then printing each element in the new array
-For example: the array 1 has value = 1 , 4, 7, 10 , 15. Then the array must have 15 , 10 , 7 , 4 , 1*/
+#include <iostream>
+#define SIZE 8 // Define the size of the array
+using namespace std;
+int main() {
+    int OrigArr[SIZE], RevArr[SIZE]; 
+    int* ptr = OrigArr;
+    for(int i = 0; i < SIZE; i++){
+        OrigArr[i] = i+1;} // initialize array 1,2,3,4... etc for the size of 'SIZE'
+    for (int i=0;i<SIZE;i++) {
+        RevArr[SIZE-1-i]=*ptr+i;}
+cout<<"Check original array: ";
+    for(int i=0; i<SIZE; i++){
+    cout<<OrigArr[i]<<" ";}
+    cout<<endl;
+cout<<"Check reversed array: ";
+    for(int i=0; i<SIZE; i++){
+    cout<<RevArr[i]<<" ";}
+    cout<<endl;
+    return 0; }

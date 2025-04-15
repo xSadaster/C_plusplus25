@@ -49,6 +49,5 @@ int main() {
     string input;
     cout << "Enter a password to check its strength: ";
     cin >> input;
-    checkPasswordStrength(input);
-    return 0;
+    checkPasswordStrength(input);   return 0;
 }
