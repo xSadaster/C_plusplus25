@@ -1,2 +1,2 @@
-# C_plusplus25
-# Trying out some new things :D
+## C_plusplus25
+# Required repository to show completed school work for C++
